@@ -27,5 +27,52 @@ body {
 header {
 	font-size: 5rem;
 	text-align: center;
-
 }
+
+.main {
+	display: grid;
+	grid-template-areas: 
+		'header header header header header header'
+		'menu main main main main right'
+		'menu main main main main right'
+		'menu main main main main right'
+		'menu main main main main right'
+		'menu main main main main right'
+		'menu footer footer footer footer footer';
+	gap: 0.5rem;
+	background-color: var(--secondary-background);
+	height: 100vh;
+}
+
+.main > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: normal;
+	align-items: center;
+	background-color: var(--background);
+	text-align: center;
+	padding: 1.5rem;
+	color: var(--text);
+}
+
+.section1 {
+	grid-area: header;
+}
+
+.section2 {
+	grid-area: menu;
+}
+
+.section3 {
+	grid-area: main;
+}
+
+.section4 {
+	grid-area: right;
+}
+
+.section5 {
+	grid-area: footer;
+	justify-content: center !important;
+}
+
