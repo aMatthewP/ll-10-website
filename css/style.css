@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+:root {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 16px;
+	--background: #30535F;
+	--secondary-background: #090f13;
+	--tertiary-background: #153b47;
+	--quarternary-background: #3d606e;
+	--quinary-background: #09191f;
+	--text: whitesmoke;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text);
+}
+
+header {
+	font-size: 5rem;
+	text-align: center;
+
+}
