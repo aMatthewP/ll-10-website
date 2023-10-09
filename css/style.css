@@ -10,13 +10,19 @@
 
 :root {
 	font-family: 'Noto Sans', sans-serif;
-	font-size: 16px;
+	font-size: 12px;
 	--background: #30535F;
 	--secondary-background: #090f13;
 	--tertiary-background: #153b47;
 	--quarternary-background: #3d606e;
 	--quinary-background: #09191f;
 	--text: whitesmoke;
+}
+
+@media screen and (max-width: 1920) {
+	:root {
+		font-size: 16px;
+	}
 }
 
 body {
@@ -29,27 +35,50 @@ header {
 	text-align: center;
 }
 
-.main {
+.nav-bar {
+	position: fixed;
+	width: 5rem;
+	background-color: var(--background);
+	height: 100vh;
+	transition: width 75ms ease;
+	overflow: hidden;
+	text-wrap: nowrap;
+}
+
+.nav-bar:hover {
+	width: 15rem;
+}
+
+.main-no-sources {
+	margin-left: 5rem;
 	display: grid;
 	grid-template-areas: 
-		'header header header header header header'
-		'menu main main main main right'
-		'menu main main main main right'
-		'menu main main main main right'
-		'menu main main main main right'
-		'menu main main main main right'
-		'menu footer footer footer footer footer';
-	gap: 0.5rem;
-	background-color: var(--secondary-background);
+		'header header header header header'
+		'main main main main main'
+		'main main main main main'
+		'main main main main main'
+		'main main main main main';
 	height: 100vh;
 }
 
-.main > div {
-	display: flex;
-	flex-direction: column;
-	justify-content: normal;
-	align-items: center;
-	background-color: var(--background);
+.main-with-sources {
+	margin-left: 5rem;
+	display: grid;
+	grid-template-areas: 
+		'header header header header header menu'
+		'main main main main main menu'
+		'main main main main main menu'
+		'main main main main main menu'
+		'main main main main main menu';
+	height: 100vh;
+}
+
+.title {
+	font-size: 3rem;
+}
+
+.main-no-sources > div {
+	background-color: var(--quarternary-background);
 	text-align: center;
 	padding: 1.5rem;
 	color: var(--text);
@@ -61,10 +90,13 @@ header {
 
 .section2 {
 	grid-area: menu;
+    border: 2px solid gray; 
 }
 
 .section3 {
+	display: grid;
 	grid-area: main;
+    border: 2px solid gray; 
 }
 
 .section4 {
