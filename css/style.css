@@ -50,7 +50,6 @@ header {
 }
 
 .main-no-sources {
-	margin-left: 5rem;
 	display: grid;
 	grid-template-areas: 
 		'header header header header header'
@@ -62,14 +61,12 @@ header {
 }
 
 .main-with-sources {
-	margin-left: 5rem;
 	display: grid;
 	grid-template-areas: 
-		'header header header header header menu'
-		'main main main main main menu'
-		'main main main main main menu'
-		'main main main main main menu'
-		'main main main main main menu';
+		'nav header header header header menu'
+		'nav main main main main menu'
+		'nav main main main main menu'
+		'nav main main main main menu';
 	height: 100vh;
 }
 
@@ -85,22 +82,78 @@ header {
 }
 
 .section1 {
-	grid-area: header;
+	grid-area: nav;
+}
+
+
+.section1 > ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	font-size: 1.5rem;
+}
+
+ul > li {
+	margin: 1rem 0 1rem 1rem;
+}
+
+ul > li:first-child {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+ul > li:last-child {
+	margin-top: auto;
+}
+
+a {
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+a:hover {
+	color:black;
 }
 
 .section2 {
-	grid-area: menu;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	grid-area: header;
     border: 2px solid gray; 
 }
 
 .section3 {
-	display: grid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	grid-area: main;
     border: 2px solid gray; 
 }
 
+.section3 > p {
+	padding: 2rem;
+	font-size: 2rem;
+	flex: 1;
+}
+
+.img-container {
+	flex: 1;
+	padding: 2rem;
+}
+
+.section3 > .img-container > img {
+	width: 100%;
+	border-radius: 10%;
+}
+
 .section4 {
-	grid-area: right;
+	grid-area: menu;
 }
 
 .section5 {
