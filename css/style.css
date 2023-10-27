@@ -83,6 +83,7 @@ header {
 
 .section1 {
 	grid-area: nav;
+	background-color: #1e232b;
 }
 
 
@@ -96,18 +97,14 @@ header {
 	font-size: 1.5rem;
 }
 
-ul > li {
+.section1 > ul > li {
 	margin: 1rem 0 1rem 1rem;
 }
 
-ul > li:first-child {
+.section1 > ul > li:first-child {
 	text-align: center;
 	font-size: 2rem;
 	margin-bottom: 2rem;
-}
-
-ul > li:last-child {
-	margin-top: auto;
 }
 
 a {
@@ -125,7 +122,6 @@ a:hover {
 	justify-items: center;
 	justify-content: center;
 	grid-area: header;
-    border: 2px solid gray; 
 }
 
 .section3 {
@@ -133,14 +129,15 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 	grid-area: main;
-    border: 2px solid gray; 
+	background-color: #7D7C7C;
 }
 
-.section3 > p {
+.section3 > div {
 	padding: 2rem;
 	font-size: 2rem;
 	flex: 1;
 }
+
 
 .img-container {
 	flex: 1;
